@@ -1,9 +1,16 @@
 #!/bin/sh
-echo "make sure installed git, zsh, neovim and curl. Type (yes,no)"
+echo "make sure installed git, zsh, neovim and curl. Type (yes,no):"
 read installedornot
 if ((installedornot == "yes")); then
-	chsh -s /bin/zsh
-	cp .zshrc ~/
+	echo "do you want to replace the zshrc. Type (yes,no):"
+	read notnewzsh
+	if ((notnewzsh == "yes")); then
+		chsh -s /bin/zsh
+		cp .zshrc ~/
+	else
+		echo "alias vim='nvim'" > ~/.zshrc
+	fi
+	
 
 	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 	       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
