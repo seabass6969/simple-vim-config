@@ -1,5 +1,6 @@
-# How to install this script:
-## git clone the repo
+# How to install it:
+the script is broken
+~~## git clone the repo
 `cd /tmp`
 `git clone https://github.com/seabass6969/simple-vim-config`
 ## install the script
@@ -7,3 +8,4 @@
 `chmod +x install.sh`
 ## starting the script
 `./install.sh`
+~~
