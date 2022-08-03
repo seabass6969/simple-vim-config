@@ -17,6 +17,6 @@ if ((installedornot == "yes")); then
 	mkdir -p ~/.config/nvim/
 	cp init.vim ~/.config/nvim/
 	nvim -c :PlugInstall
-else
+else if ((installedornot == "no")); then
 	echo "installed it first"	
 fi
