@@ -18,5 +18,7 @@ if ((installedornot == "yes")); then
 	cp init.vim ~/.config/nvim/
 	nvim -c :PlugInstall
 else if ((installedornot == "no")); then
-	echo "installed it first"	
+	echo "installed it first"
+else 
+	echo "what do you just type"
 fi
